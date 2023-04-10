@@ -24,6 +24,10 @@ close_icon.addEventListener("click",()=>{
   document.querySelector("nav").classList.remove('show')
 })
 
+document.querySelector("nav").addEventListener('click',()=>{
+  document.querySelector("nav").classList.remove('show')
+})
+
 const options = {
   root:null,
   threshold:0.25,
@@ -98,11 +102,13 @@ function loader(interval){
       counter++
       num.innerHTML = `${counter}%`
       document.querySelector("body").style.overflowY= "hidden";
+      document.querySelector('.carousel').style.display = "none"
     }
     if(counter === numVal){
 
       console.log('done')
       document.querySelector(".loader").style.display ="none";
+      document.querySelector('.carousel').style.display = "block"
       document.querySelector("body").style.overflowY= "scroll";
       clearInterval(interval)
     }

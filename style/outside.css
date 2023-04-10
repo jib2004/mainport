@@ -1,6 +1,7 @@
 
 body{
   scroll-behavior: smooth;
+  overflow-x: none;
 }
 .loader{
   width: 100vw;
@@ -24,6 +25,7 @@ body{
 	color: #fff;
 	outline: 2px solid #7effb2;
 	outline-offset: -1px;
+  
 }
 .progress-bar::after,
 .number {

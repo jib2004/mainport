@@ -401,7 +401,7 @@ header nav ul li a:hover::before {
   color: #4f4f4f;
   margin-right: 60px;
   padding: 20px;
-  width: max-content;
+  width: 300px;
 }
 @media (max-width: 576px) {
   #about_me .aboutme-container .about_me3 .box_grid .grid {
@@ -452,6 +452,12 @@ header nav ul li a:hover::before {
   width: 80%;
   margin: 0 auto;
 }
+@media (max-width: 576px) {
+  #project .project-container {
+    width: 100%;
+    margin: 0;
+  }
+}
 #project .project-container h1 {
   text-align: center;
 }
@@ -460,6 +466,12 @@ header nav ul li a:hover::before {
   padding: 10px;
   width: 80%;
   margin: 0 auto;
+}
+@media (max-width: 576px) {
+  #project .project-container .project-lists {
+    width: 100%;
+    margin: 0;
+  }
 }
 #project .project-container .project-lists .list_1 {
   display: flex;
@@ -473,6 +485,24 @@ header nav ul li a:hover::before {
 #project .project-container .project-lists .list_1 div p {
   width: 300px;
 }
+@media (max-width: 576px) {
+  #project .project-container .project-lists .list_1 div p {
+    margin: 10px 0 10px 0;
+    text-align: justify;
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  #project .project-container .project-lists .list_1 div img {
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  #project .project-container .project-lists .list_1 {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+}
 
 #services {
   margin-top: 5%;
@@ -485,6 +515,11 @@ header nav ul li a:hover::before {
   color: white;
   font-size: 50px;
   text-align: center;
+}
+@media (max-width: 576px) {
+  #services .service-header {
+    margin-bottom: 20px;
+  }
 }
 #services .service {
   display: flex;
@@ -594,6 +629,10 @@ header nav ul li a:hover::before {
   border-bottom: 2px solid white;
   outline: none;
   background: inherit;
+}
+#contact .contact-cont #contact-form .contact-info div input:focus {
+  outline: none;
+  background: transparent;
 }
 #contact .contact-cont #contact-form .contact-info div input:focus ~ label, #contact .contact-cont #contact-form .contact-info div input:valid ~ label {
   top: -20px;
