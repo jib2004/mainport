@@ -168,7 +168,9 @@ header{
                         transform-origin: left;
                         transition: scale 0.25s;
 
-                        
+                     @media (max-width:576px) {
+                        display: none;
+                     }   
                     }
                     &:hover{
                         color: $green;
@@ -404,6 +406,7 @@ header{
 
         .about_me3{
             margin-top: 30px;
+            width: 100%;
             .what{
                 text-align: center;
                 h1{
@@ -419,7 +422,9 @@ header{
                 grid-template-columns: auto auto auto;
                 justify-content: center;
                 // border: 1px solid red;
-
+                @media (min-width: 576px) and (max-width: 1024px){
+                    // width: 100%;
+                }
                 @media (max-width:576px) {
                     grid-template-columns: auto;
                     justify-content: unset;
@@ -431,6 +436,11 @@ header{
                     margin-right: 60px;
                     padding: 20px;
                     width: 300px;
+                    @media (min-width: 576px) and (max-width: 1024px){
+                        margin-right: 20px;
+                        padding: 10px;
+                        width: 200px;
+                    }
                     @media (max-width:576px) {
                         margin-right: 0;
                         margin-top: 15px;
@@ -485,6 +495,12 @@ header{
     .project-container{
         width: 80%;
         margin: 0 auto;
+
+        @media (min-width: 576px) and (max-width: 1024px){
+            width: 100%;
+            padding: 20px;
+            margin: 0;
+        }
         @media (max-width: 576px){
             width: 100%;
             margin: 0;
@@ -498,6 +514,11 @@ header{
             padding: 10px;
             width: 80%;
             margin: 0 auto;
+            @media (min-width: 576px) and (max-width: 1024px){
+                width: 100%;
+                margin: 0;
+                // padding: 10px;
+            }
             @media (max-width: 576px){
                 width: 100%;
                 margin: 0;
@@ -507,6 +528,9 @@ header{
                 padding: 10px;
                 align-items: center;
                 justify-content:space-between ;
+                @media (min-width: 576px) and (max-width: 1024px){
+                    padding: 0;
+                }
                 div{
                     margin-right: 20px;
                 p{
@@ -519,6 +543,10 @@ header{
                     }
                 }
                 img{
+
+                    @media (min-width: 576px) and (max-width: 1024px){
+                        
+                    }
                     @media (max-width: 576px){
                         width: 100%;
                     }        
@@ -740,6 +768,95 @@ header{
            
         }
     }
+
+    .socials{
+        margin-top: 2.5em;
+
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            // border:1px solid red;
+            width: 100%;
+            padding: 10px;
+           
+            li{
+                font-size: 25px;
+                border: 1px solid white;
+                width: 50px;
+                height:50px;
+                position: relative;
+                border-radius: 50%;
+                margin: 0 20px;
+                transition: all 500ms;
+
+                @media (max-width:576px) {
+                    margin: 0 10px;
+                    &:nth-child(1){
+                        border: none;
+                    background: #d6249f;
+                    background: radial-gradient(circle at 30% 107%,#fdf497 0%, #fdf497 5%, #d6249f 60%, #285AEB 90%);
+                }
+                &:nth-child(2){
+                    border: none;
+                    background-color: skyblue;
+                }
+                &:nth-child(3){
+                    border: none;
+                    background-color:#0077b5;
+                }
+                &:nth-child(4){
+                    border: none;
+                    background-color: #005eff;
+                }   
+                }
+                @media (min-width: 576px) and (max-width: 1024px) {
+                    &:nth-child(1){
+                        border: none;
+                    background: #d6249f;
+                    background: radial-gradient(circle at 30% 107%,#fdf497 0%, #fdf497 5%, #d6249f 60%, #285AEB 90%);
+                }
+                &:nth-child(2){
+                    border: none;
+                    background-color: skyblue;
+                }
+                &:nth-child(3){
+                    border: none;
+                    background-color:#0077b5;
+                }
+                &:nth-child(4){
+                    border: none;
+                    background-color: #005eff;
+                }   
+                }
+    
+
+                &:nth-child(1):hover{
+                    background: #d6249f;
+                    background: radial-gradient(circle at 30% 107%,#fdf497 0%, #fdf497 5%, #d6249f 60%, #285AEB 90%);
+                }
+                &:nth-child(2):hover{
+                    background-color: skyblue;
+                }
+                &:nth-child(3):hover{
+                    background-color:#0077b5;
+                }
+                &:nth-child(4):hover{
+                    background-color: #005eff;
+                }
+                a{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    i{
+                        color: $primaryColor;
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 

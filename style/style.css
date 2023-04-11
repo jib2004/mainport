@@ -161,6 +161,11 @@ header nav ul li a::before {
   transform-origin: left;
   transition: scale 0.25s;
 }
+@media (max-width: 576px) {
+  header nav ul li a::before {
+    display: none;
+  }
+}
 header nav ul li a:hover {
   color: #27AE60;
 }
@@ -375,6 +380,7 @@ header nav ul li a:hover::before {
 }
 #about_me .aboutme-container .about_me3 {
   margin-top: 30px;
+  width: 100%;
 }
 #about_me .aboutme-container .about_me3 .what {
   text-align: center;
@@ -402,6 +408,13 @@ header nav ul li a:hover::before {
   margin-right: 60px;
   padding: 20px;
   width: 300px;
+}
+@media (min-width: 576px) and (max-width: 1024px) {
+  #about_me .aboutme-container .about_me3 .box_grid .grid {
+    margin-right: 20px;
+    padding: 10px;
+    width: 200px;
+  }
 }
 @media (max-width: 576px) {
   #about_me .aboutme-container .about_me3 .box_grid .grid {
@@ -452,6 +465,13 @@ header nav ul li a:hover::before {
   width: 80%;
   margin: 0 auto;
 }
+@media (min-width: 576px) and (max-width: 1024px) {
+  #project .project-container {
+    width: 100%;
+    padding: 20px;
+    margin: 0;
+  }
+}
 @media (max-width: 576px) {
   #project .project-container {
     width: 100%;
@@ -467,6 +487,12 @@ header nav ul li a:hover::before {
   width: 80%;
   margin: 0 auto;
 }
+@media (min-width: 576px) and (max-width: 1024px) {
+  #project .project-container .project-lists {
+    width: 100%;
+    margin: 0;
+  }
+}
 @media (max-width: 576px) {
   #project .project-container .project-lists {
     width: 100%;
@@ -478,6 +504,11 @@ header nav ul li a:hover::before {
   padding: 10px;
   align-items: center;
   justify-content: space-between;
+}
+@media (min-width: 576px) and (max-width: 1024px) {
+  #project .project-container .project-lists .list_1 {
+    padding: 0;
+  }
 }
 #project .project-container .project-lists .list_1 div {
   margin-right: 20px;
@@ -682,6 +713,89 @@ header nav ul li a:hover::before {
 }
 #contact .contact-cont #contact-form .submit_div #contact-submit:active {
   background-color: #18512f;
+}
+#contact .socials {
+  margin-top: 2.5em;
+}
+#contact .socials ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+}
+#contact .socials ul li {
+  font-size: 25px;
+  border: 1px solid white;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  border-radius: 50%;
+  margin: 0 20px;
+  transition: all 500ms;
+}
+@media (max-width: 576px) {
+  #contact .socials ul li {
+    margin: 0 10px;
+  }
+  #contact .socials ul li:nth-child(1) {
+    border: none;
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #d6249f 60%, #285AEB 90%);
+  }
+  #contact .socials ul li:nth-child(2) {
+    border: none;
+    background-color: skyblue;
+  }
+  #contact .socials ul li:nth-child(3) {
+    border: none;
+    background-color: #0077b5;
+  }
+  #contact .socials ul li:nth-child(4) {
+    border: none;
+    background-color: #005eff;
+  }
+}
+@media (min-width: 576px) and (max-width: 1024px) {
+  #contact .socials ul li:nth-child(1) {
+    border: none;
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #d6249f 60%, #285AEB 90%);
+  }
+  #contact .socials ul li:nth-child(2) {
+    border: none;
+    background-color: skyblue;
+  }
+  #contact .socials ul li:nth-child(3) {
+    border: none;
+    background-color: #0077b5;
+  }
+  #contact .socials ul li:nth-child(4) {
+    border: none;
+    background-color: #005eff;
+  }
+}
+#contact .socials ul li:nth-child(1):hover {
+  background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #d6249f 60%, #285AEB 90%);
+}
+#contact .socials ul li:nth-child(2):hover {
+  background-color: skyblue;
+}
+#contact .socials ul li:nth-child(3):hover {
+  background-color: #0077b5;
+}
+#contact .socials ul li:nth-child(4):hover {
+  background-color: #005eff;
+}
+#contact .socials ul li a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#contact .socials ul li a i {
+  color: white;
 }
 
 footer {
