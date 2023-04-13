@@ -15,25 +15,6 @@ let t = document.getElementById("amount").value
 // let page = document.querySelectorAll("sect")
 
 
-function loader(interval){
-  interval = setInterval(() => {
-    if (counter !== numVal) {
-      //document.querySelector(".loader").style.display ="block";
-      counter++
-      num.innerHTML = `${counter}%`
-      document.querySelector("body").style.overflowY= "hidden";
-      document.querySelector('.carousel').style.display = "none"
-    }
-    if(counter === numVal){
-
-      console.log('done')
-      document.querySelector(".loader").style.display ="none";
-      document.querySelector('.carousel').style.display = "block"
-      document.querySelector("body").style.overflowY= "scroll";
-      clearInterval(interval)
-    }
-  }, 80)
-}
 
 
 window.addEventListener("load", ()=>{
@@ -124,6 +105,25 @@ function payWithPaystack(e) {
 })
 
 
+function loader(interval){
+  interval = setInterval(() => {
+    if (counter !== numVal) {
+      //document.querySelector(".loader").style.display ="block";
+      counter++
+      num.innerHTML = `${counter}%`
+      document.querySelector("body").style.overflowY= "hidden";
+      document.querySelector('.carousel').style.display = "none"
+    }
+    if(counter === numVal){
+
+      console.log('done')
+      document.querySelector(".loader").style.display ="none";
+      document.querySelector('.carousel').style.display = "block"
+      document.querySelector("body").style.overflowY= "scroll";
+      clearInterval(interval)
+    }
+  }, 80)
+}
 
 
 
