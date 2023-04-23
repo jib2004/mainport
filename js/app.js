@@ -37,8 +37,8 @@ document.querySelector("nav").addEventListener('click',()=>{
 
 const options = {
   root:null,
-  threshold:0.25,
-  rootMargin:"-150px"
+  threshold:0.1,
+  // rootMargin:"2px"
 }
 
 
@@ -50,7 +50,7 @@ let observer =new IntersectionObserver(e=>{
 
     }
   })
-})
+},options)
 
 const hiddenElement = document.querySelectorAll(".hidden")
 hiddenElement.forEach(el=>observer.observe(el))
