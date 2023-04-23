@@ -108,6 +108,7 @@ function payWithPaystack(e) {
 
 document.getElementById('contact-form').onsubmit = (e) =>{
   e.preventDefault()
+
  const params= {
   from_name:document.getElementById('fname').value,
   email_id:document.getElementById('email').value,
@@ -119,15 +120,18 @@ const templateId="template_k0uieaw"
 emailjs.send(serviceId,templateId,params).then(
   res=>{
   alert("Message sent successfully")
+
+console.log(res)
+
+})
+.catch(err=>console.log(err));
+
+
 document.getElementById('fname').value =" "
 document.getElementById('lname').value =" "
 document.getElementById('email').value =" "
 document.getElementById('phone').value =" "
 document.getElementById('message').value =" "
-console.log(res)
-
-})
-.catch(err=>console.log(err));
 }
 
 
