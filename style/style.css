@@ -440,21 +440,19 @@ header nav ul li a:hover::before {
   size: 36px;
   text-align: center;
 }
-#about_me .aboutme-container .about_me4 .grid_3 {
-  display: grid;
-  justify-content: center;
-  grid-template-columns: auto auto auto;
-  text-align: center;
+#about_me .aboutme-container .about_me4 div {
+  align-items: center;
 }
-#about_me .aboutme-container .about_me4 .grid_3 div {
-  width: 100%;
-  text-align: center;
-  padding: 20px;
-  background-color: #212121;
+#about_me .aboutme-container .about_me4 div .bar-con {
+  display: inline-block;
+  width: 90%;
+  margin-left: 10px;
 }
-#about_me .aboutme-container .about_me4 .grid_3 div p {
-  color: #27AE60;
-  font-weight: bold;
+#about_me .aboutme-container .about_me4 div .bar-con div .bar {
+  background-color: #27AE60;
+  text-align: end;
+  border-radius: inherit;
+  padding-right: 20px;
 }
 
 #project {

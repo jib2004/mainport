@@ -1,9 +1,9 @@
 import 'https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js';
 
 
-const num = document.querySelector('.number')
-const numVal = Number(num.getAttribute('data-value'))
-let counter = 0
+// const num = document.querySelector('.number')
+// const numVal = Number(num.getAttribute('data-value'))
+// let counter = 0
 let bars_icon = document.querySelector('.icon')
 let close_icon = document.querySelector('.icon-x')
 const orderButton =document.querySelectorAll(".order-button")
@@ -14,11 +14,15 @@ let z =document.getElementById("amount")
 let t = document.getElementById("amount").value 
 // let page = document.querySelectorAll("sect")
 
+window.addEventListener('load',()=>{
+  
+  document.querySelector('.loader').classList.add('rem_loader')
+  document.querySelector('.carousel').classList.add('carousel-show')
+}) 
 
 
+// window.addEventListener("load", ()=>{
 
-window.addEventListener("load", ()=>{
-loader()
 bars_icon.addEventListener('click', ()=>{
   document.querySelector('nav').classList.add('show')
 })
@@ -102,28 +106,59 @@ function payWithPaystack(e) {
 }
 
 
+document.getElementById('contact-form').onsubmit = (e) =>{
+  e.preventDefault()
+ const params= {
+  from_name:document.getElementById('fname').value,
+  email_id:document.getElementById('email').value,
+  message:document.getElementById('message').value
+
+ }
+ const serviceId="service_dssii1s"
+const templateId="template_k0uieaw"
+emailjs.send(serviceId,templateId,params).then(
+  res=>{
+document.getElementById('fname').value =" "
+document.getElementById('lname').value =" "
+document.getElementById('email').value =" "
+document.getElementById('phone').value =" "
+document.getElementById('message').value =" "
+console.log(res)
+alert("Message sent successfully")
 })
-
-
-function loader(interval){
-  interval = setInterval(() => {
-    if (counter !== numVal) {
-      //document.querySelector(".loader").style.display ="block";
-      counter++
-      num.innerHTML = `${counter}%`
-      document.querySelector("body").style.overflowY= "hidden";
-      document.querySelector('.carousel').style.display = "none"
-    }
-    if(counter === numVal){
-
-      console.log('done')
-      document.querySelector(".loader").style.display ="none";
-      document.querySelector('.carousel').style.display = "block"
-      document.querySelector("body").style.overflowY= "scroll";
-      clearInterval(interval)
-    }
-  }, 80)
+.catch(err=>console.log(err));
 }
+
+
+
+// })
+
+
+//function loader(){
+
+
+
+
+
+
+  // interval = setInterval(() => {
+  //   if (counter !== numVal) {
+  //     //document.querySelector(".loader").style.display ="block";
+  //     // counter++
+  //     // num.innerHTML = `${counter}%`
+  //     document.querySelector("body").style.overflowY= "hidden";
+  //     document.querySelector('.carousel').style.display = "none"
+  //   }
+  //   if(counter === numVal){
+
+  //     console.log('done')
+  //     document.querySelector(".loader").style.display ="none";
+  //     document.querySelector('.carousel').style.display = "block"
+  //     document.querySelector("body").style.overflowY= "scroll";
+  //     clearInterval(interval)
+  //   }
+  // }, 80)
+//}
 
 
 

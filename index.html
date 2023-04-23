@@ -14,11 +14,25 @@
 <link rel="stylesheet" href="style/style.css">
 <link rel="stylesheet" href="style/outside.css">
 <script src="js/app.js" type="module" defer></script>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+   <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("gB39jncbGjerbsrjd");
+   })();
+</script>
 <title>Obasa Ajibola</title>
 </head>
-<body>
+<body >
     <div class="loader">
-    <div class="progress-bar">
+        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    <!-- <div class="progress-bar">
         <span class="number" data-value="100"></span>
         <svg height="150" width="150" class="circle">
             <circle
@@ -29,18 +43,20 @@
                 stroke-width="20"
                 fill="none"
             />
-        </svg>
+        </svg> -->
     </div>
 </div>
 
-    <div class="carousel">
+<div  class="carousel animate__animated animate__fadeInLeft">
         <!-- <div class="scroll-tracker"></div> -->
     <div class="container-fluid page">
         
     <header>
         <div class="nav-container">
             <div class="logo">
-                <h1>OBASA AJIBOLA</h1>
+                
+                    
+                <h1 class="myName">OBASA AJIBOLA</h1>
             </div>
             <div class="icon">
                 <i class="fa-solid fa-bars"></i>
@@ -178,23 +194,70 @@
             My Skills
         </h1>
 
-        <div class="grid_3">
-            <div>
-               <h1>80%</h1>
-               <p>HTML</p> 
+        <div class="">
+           <div class="d-flex mt-3">
+            <span>HTML</span>
+            <div class="bar-con">
+            <div class="progress " role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                <div class="bar" style="width: 80%;">80%</div>
+                
+              </div>
             </div>
+           </div>
 
-            <div>
-                <h1>70%</h1>
-                <p>CSS</p> 
-             </div>
+           <div class="d-flex mt-3">
+            <span>CSS</span>
+            <div class="bar-con">
+            <div class="progress " role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                <div class="bar" style="width: 70%;">70%</div>
+                
+              </div>
+            </div>
+           </div>
 
-             <div>
-                <h1>50%</h1>
-                <p>JAVASCRIPT</p> 
-             </div>
+           <div class="d-flex mt-3">
+            <span>JavaScript</span>
+            <div class="bar-con">
+            <div class="progress " role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                <div class="bar" style="width: 50%;">50%</div>
+                
+              </div>
+            </div>
+           </div>
+
+
+           <div class="d-flex mt-3">
+            <span>React</span>
+            <div class="bar-con">
+            <div class="progress " role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                <div class="bar" style="width: 10%;">10%</div>
+                
+              </div>
+            </div>
+           </div>
+
+
+           <div class="d-flex mt-3">
+            <span>Jquery</span>
+            <div class="bar-con">
+            <div class="progress " role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                <div class="bar" style="width: 40%;">40%</div>
+                
+              </div>
+            </div>
+           </div>
+
+           <div class="d-flex mt-3">
+            <span>Git</span>
+            <div class="bar-con">
+            <div class="progress " role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                <div class="bar" style="width: 100%;">100%</div>
+                
+              </div>
+            </div>
+           </div>
+         
         </div>
-    </div>
 
 
 </div>
@@ -209,10 +272,19 @@
             <div class="list_1">
                 <div>
                 <p>I built a todo app using HTML,CSS and JavaScript. The app allows you add tasks and delete tasks</p>
-                <a href="projects/JibsTodoApp/index.html"><button type="button" class="btn btn-outline-primary">View Live</button></a> 
+                <a href="https://jib2004.github.io/JibsTodoApp/" target="_blank"><button type="button" class="btn btn-outline-primary">View Live</button></a> 
             </div>
             
                 <div><img src="project_img/Web capture_22-3-2023_93020_127.0.0.1.jpeg" width="500" alt=""></div>
+            </div>
+
+            <div class="list_1">
+                <div>
+                <p>I built a todo app using HTML,CSS and JavaScript. The app allows you add tasks and delete tasks</p>
+                <a href="https://doc-planner-clone.vercel.app/" target="_blank"><button type="button" class="btn btn-outline-primary">View Live</button></a> 
+            </div>
+            
+                <div><img src="project_img/Web capture_17-4-2023_222735_doc-planner-clone.vercel.app.jpeg" width="500" alt=""></div>
             </div>
 
         </div>
@@ -260,7 +332,7 @@
                 <button disabled>Standard</button>
                 
                   <div class="prices"> <span>&#8358;</span> <h1 class="price-amt" data-value="150">112500</h1></div>
-                <h3>Front-End + BackEnd</h3>
+                <h3>Front-End</h3>
                 <ul>
                     <li>
                         <div class="list-div"><div><i class="fa-solid fa-check"></i> </div><span>Content Upload</span></div>
@@ -350,7 +422,7 @@
         <form action="" id="contact-form">
         <div class="contact-info">
             <div>
-                <input type="text" name="" id="">
+                <input type="text" name="" id="fname">
                 <label for="">First Name</label>
             </div>
             <div>
@@ -358,20 +430,20 @@
                 <label for="">Last Name</label>
             </div>
             <div>
-                <input type="email" name="" id="">
+                <input type="email" name="" id="email">
                 <label for="">Email Address</label>
             </div>
             <div>
-                <input type="tel" name="" id="">
+                <input type="tel" name="" id="phone">
                 <label for="">Phone Number</label>
             </div>
         </div>
 
         <div class="contact-comment">
-            <textarea name="" placeholder="Message" id="" cols="30" rows="10"></textarea>
+            <textarea name="" placeholder="Message" id="message" cols="30" rows="10"></textarea>
         </div>
         <div class="submit_div">
-        <input type="submit" id="contact-submit" value="Submit now">
+        <input type="submit" id="contact-submit" onclick="sendMail()"  value="Submit now">
     </div>
     </form>
 <div class="socials">
@@ -394,8 +466,6 @@
 <script src="https://js.paystack.co/v1/inline.js"></script> 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
-
-
 
 
 </body>

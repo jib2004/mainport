@@ -466,24 +466,29 @@ header{
                 size: 36px;
                 text-align: center;
             }
-            .grid_3{
-                display: grid;
-                justify-content: center;
-                grid-template-columns: auto auto auto;
-                text-align: center;
-                div{
-                    width: 100%;
-                    text-align: center;
-                    padding: 20px;
-                    background-color: $grid2;
 
-                    p{
-                        color: $green;
-                        font-weight: bold;
+            div{
+                // border: 1px solid red;
+                align-items: center;
+                .bar-con{
+                    display: inline-block;
+                    width: 90%;
+                    margin-left: 10px;
+                    // background: white;
+                    div{
+                        
+                        .bar{
+                            background-color: $green;
+                            text-align: end;
+                            border-radius: inherit;
+                            padding-right: 20px;
+                        }
                     }
-
+                    
                 }
+                
             }
+            
         }
 
     }
