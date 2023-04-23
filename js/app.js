@@ -50,7 +50,7 @@ let observer =new IntersectionObserver(e=>{
 
     }
   })
-})
+},options)
 
 const hiddenElement = document.querySelectorAll(".hidden")
 hiddenElement.forEach(el=>observer.observe(el))
@@ -118,13 +118,14 @@ document.getElementById('contact-form').onsubmit = (e) =>{
 const templateId="template_k0uieaw"
 emailjs.send(serviceId,templateId,params).then(
   res=>{
+  alert("Message sent successfully")
 document.getElementById('fname').value =" "
 document.getElementById('lname').value =" "
 document.getElementById('email').value =" "
 document.getElementById('phone').value =" "
 document.getElementById('message').value =" "
 console.log(res)
-alert("Message sent successfully")
+
 })
 .catch(err=>console.log(err));
 }
