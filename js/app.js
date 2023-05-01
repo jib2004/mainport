@@ -106,8 +106,13 @@ function payWithPaystack(e) {
 }
 
 
+
 document.getElementById('contact-form').onsubmit = (e) =>{
   e.preventDefault()
+  const phone = document.getElementById('phone').value
+  const userMail = document.getElementById('email').value
+  if(phone.length === 11 && userMail.includes("@")){
+  collector()
 
  const params= {
   from_name:document.getElementById('fname').value,
@@ -132,8 +137,24 @@ document.getElementById('lname').value =" "
 document.getElementById('email').value =" "
 document.getElementById('phone').value =" "
 document.getElementById('message').value =" "
+}else{
+  alert("Please check if the number is up to 11 digits and The email has an @ symbol")
+  return false
+}
 }
 
+
+function collector(){
+  
+  const userInputs ={
+    "firstName":document.getElementById('fname').value,
+    "lastName":document.getElementById('lname').value,
+    "userEmail": document.getElementById('email').value,
+    "PhoneNumber": document.getElementById('phone').value
+  }
+  const myUserInput = JSON.stringify(userInputs)
+  localStorage.setItem("userTable", myUserInput)
+}
 
 
 // })

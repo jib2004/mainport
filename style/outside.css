@@ -224,6 +224,11 @@ body{
 }
 
 
+.form-group input[type="tel"]:disabled{
+  background-color: #fff;
+  color: black;
+}
+
 
 /* Style the submit button */
 .form-submit button {
